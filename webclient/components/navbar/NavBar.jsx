@@ -14,7 +14,7 @@ class MenuExamplePointing extends Component {
            <div>
                <Menu stackable>
                 <Menu.Item style = {{margin: 'auto'}}>
-                  <Image src = {require('./weathernews_1200x900-1508770629-6259.jpg')} size = 'small'/>
+                  <Image src = {require('./weathernews_1200x900-1508770629-6259.jpg')} size = 'small' circular/>
                 </Menu.Item>
                </Menu>
            </div>

@@ -25,7 +25,6 @@ class MainComponent extends React.Component {
       getCurrentCoordinates() {
         navigator.geolocation.getCurrentPosition(this.success.bind(this),this.options.bind(this));
       }
-
       getWeatherFromQuery(wcity)
       {
               var stateData = {
@@ -65,11 +64,13 @@ class MainComponent extends React.Component {
 
     render()
     {
+      console.log(this.state);
         return (
             <div>
                 <NavBar activeItem = 'home'/>
                 <br/>
                 <Weather.searchTab getWeatherFromQueryProp={this.getWeatherFromQuery.bind(this)} getCurrentCoordinates={this.getCurrentCoordinates.bind(this)}/>
+                <h1 style = {{marginLeft: '5%'}}>{this.state.jsonarray['city'] ? this.state.jsonarray['city']['name']: ''} </h1>
                 <Weather.cardMap weatherArrProp={this.state.jsonarray} lat={this.state.lat} lon={this.state.lon}/>
             </div>
 
