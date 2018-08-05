@@ -48,7 +48,7 @@ class DisplayComponent extends React.Component {
             console.log(a);
             return(
               <Segment style = {{width: '90%', margin: 'auto',marginBottom:'20px'}}>
-              <h3>{(i == 0) ? 'Today' : (i == 1) ? 'Tomorrow' : dat} </h3>
+              <h3 style = {{color: '#73c1d5'}}>{(i == 0) ? 'Today' : (i == 1) ? 'Tomorrow' : dat} </h3>
               <Grid centered>
                 {a}
               </Grid>

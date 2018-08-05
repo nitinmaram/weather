@@ -70,7 +70,7 @@ class MainComponent extends React.Component {
                 <NavBar activeItem = 'home'/>
                 <br/>
                 <Weather.searchTab getWeatherFromQueryProp={this.getWeatherFromQuery.bind(this)} getCurrentCoordinates={this.getCurrentCoordinates.bind(this)}/>
-                <h1 style = {{marginLeft: '5%'}}>{this.state.jsonarray['city'] ? this.state.jsonarray['city']['name']: ''} </h1>
+                <h1 style = {{marginLeft: '5%', color: '#73c1d5'}}>{this.state.jsonarray['city'] ? this.state.jsonarray['city']['name']: ''} </h1>
                 <Weather.cardMap weatherArrProp={this.state.jsonarray} lat={this.state.lat} lon={this.state.lon}/>
             </div>
 

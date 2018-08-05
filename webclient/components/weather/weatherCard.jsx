@@ -15,13 +15,13 @@ class WeatherCard extends React.Component {
         return(
   <Card style = {{height: 'auto', boxShadow: 'none'}}>
   <Card.Content>
-    <Card.Header>{this.props.time.split(' ')[1]}</Card.Header><br/>
+    <Card.Header style ={{color: '#2185d0'}}>{this.props.time.split(' ')[1]}</Card.Header><br/>
     <Card.Meta style = {{fontSize: '25px'}}>{this.props.weatherDescp}</Card.Meta>
-    <Card.Description className="desc" as = 'h3'>
+    <Card.Description className="desc" as = 'h3' style = {{color: '#ffd40c'}}>
     Temperature : {this.props.temp} k <br/>
     </Card.Description>
   </Card.Content>
-  <Card.Content extra>
+  <Card.Content extra style = {{color: '#2185d0'}}>
   Min Temp : {this.props.minTemp} k <br/>
   Max Temp : {this.props.maxTemp} k <br/>
     Humidity :  {this.props.humidity} %
