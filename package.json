@@ -21,7 +21,8 @@
     "react-select": "^1.0.0-rc.2",
     "react-tap-event-plugin": "^2.0.1",
     "react-toastify": "^4.1.0",
-    "semantic-ui-react": "^0.82.0"
+    "semantic-ui-react": "^0.82.0",
+    "toastify": "^1.0.12"
   },
   "devDependencies": {
     "babel-core": "^6.16.0",

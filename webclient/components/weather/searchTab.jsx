@@ -8,22 +8,21 @@ class searchTab extends React.Component {
     constructor() {
         super();
         this.state = {
-            cusine: "",
-            rcity: ""
+            wcity: ""
         }
     }
     changecity(e)
     {
-        this.setState({rcity: e.target.value});
+        this.setState({wcity: e.target.value});
     }
 
     searchWeather() {
-        this.props.getWeatherFromQueryProp(this.state.rcity, this.state.cusine);
+        this.props.getWeatherFromQueryProp(this.state.wcity);
     }
     render() {
         return (
             <Container textAlign="center">
-                <Input focus placeholder='Search City' ref="rcity"
+                <Input focus placeholder='Search City' ref="wcity"
                 onChange={this.changecity.bind(this)}/>&nbsp;&nbsp;&nbsp;
                 <Button primary onClick={this.searchWeather.bind(this)}>Search</Button>
                 <Button primary onClick={this.props.getCurrentCoordinates.bind(this)}>Present Location Weather</Button>
@@ -32,9 +31,5 @@ class searchTab extends React.Component {
         );
     }
 }
-// export default searchTab;
-searchTab.propTypes = {
- handle: React.PropTypes.func,
- name: React.PropTypes.object
-}
+
 export default searchTab;

@@ -1,7 +1,6 @@
 import React from 'react'
 import {Button} from 'semantic-ui-react'
 import { Card, Icon, Image, Input, Container} from 'semantic-ui-react'
-import 'react-toastify/dist/ReactToastify.css';
 
 class WeatherCard extends React.Component {
     constructor() {
@@ -13,6 +12,7 @@ class WeatherCard extends React.Component {
       render()
       {
         return(
+
   <Card style = {{height: 'auto', boxShadow: '3px 3px #2185d0, 6px 6px #ffd40c'}}>
   <Card.Content>
     <Card.Header style ={{color: '#2185d0'}}>{this.props.time.split(' ')[1]}</Card.Header><br/>
